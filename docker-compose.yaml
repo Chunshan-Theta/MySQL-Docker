@@ -13,8 +13,6 @@ services:
         image: phpmyadmin
         environment:
             PMA_HOST: mysql
-            PMA_USER: root
-            PMA_PASSWORD: root
             UPLOAD_LIMIT: 1024M
             MEMORY_LIMIT: 1024M
             MAX_EXECUTION_TIME: 300
