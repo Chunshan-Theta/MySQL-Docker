@@ -1,7 +1,7 @@
 version: "3"
 services:
     mysql:
-        image: mariadb:10.1.37 #mysql
+        image: mariadb #mysql
         environment:
             MARIADB_ROOT_PASSWORD: root
         restart: always
