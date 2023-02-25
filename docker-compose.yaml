@@ -15,7 +15,7 @@ services:
             - ./code:/code
             - ./php.ini:/usr/local/etc/php/php.ini
     mysql:
-        image: mysql
+        image: mariadb:10.1.37 #mysql
         environment:
             MYSQL_ROOT_PASSWORD: root
         restart: always
