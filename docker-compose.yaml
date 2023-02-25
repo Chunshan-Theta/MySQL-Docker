@@ -4,9 +4,7 @@ services:
     mysql:
         image: mariadb:10.1.37 #mysql
         environment:
-            MYSQL_ROOT_PASSWORD: root
-            MYSQL_USER: wulab
-            MYSQL_PASSWORD: wulab
+            MYSQL_ROOT_PASSWORD: wulab
         restart: always
         volumes:
             - ./database:/var/lib/mysql
@@ -16,12 +14,14 @@ services:
         image: phpmyadmin/phpmyadmin
         environment:
             PMA_HOST: mysql
-            PMA_USER: wulab
+            PMA_USER: root
             PMA_PASSWORD: wulab
             UPLOAD_LIMIT: 1024M
             MEMORY_LIMIT: 1024M
             MAX_EXECUTION_TIME: 300
             PMA_ARBITRARY: 1
+            MYSQL_USER: wulab
+            MYSQL_PASSWORD: wulab
         ports:
             - "8081:80"
         restart: always
