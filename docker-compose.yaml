@@ -3,7 +3,7 @@ services:
     mysql:
         image: mariadb:10.1.37 #mysql
         environment:
-            MYSQL_ROOT_PASSWORD: root
+            MARIADB_ROOT_PASSWORD: root
         restart: always
         volumes:
             - ./database:/var/lib/mysql
